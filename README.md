@@ -22,7 +22,8 @@
 
 微调方式：LoRA Fine-tuning（低秩适配）
 
-训练平台：魔搭社区 AIGC 模型训练专区（ModelScope AIGC）
+训练平台：魔搭社区 AIGC、模型训练专区（ModelScope AIGC）
+
 
 
 *数据来源*
