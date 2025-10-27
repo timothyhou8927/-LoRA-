@@ -19,13 +19,19 @@
 
 *模型基础*
 基模（Base Model）：Qwen-Image 系列
+
 微调方式：LoRA Fine-tuning（低秩适配）
+
 训练平台：魔搭社区 AIGC 模型训练专区（ModelScope AIGC）
+
 
 *数据来源*
 故事文本数据集：Starlight-AI Test Set
+
 专业知识包：《孤独症儿童绘本相关资料包》
+
 绘本生成流程基线：绘本生成Baseline工作流
+
 
 🧠 四、LoRA 训练细节 | LoRA Training Details
 项目	内容
