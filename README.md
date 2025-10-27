@@ -16,6 +16,7 @@
 🌍 推动教育普惠：项目模型与工具开放至魔搭社区，助力公益教育资源共享。
 
 ⚙️ 三、技术方案 | Technical Architecture
+
 *模型基础*
 基模（Base Model）：Qwen-Image 系列
 微调方式：LoRA Fine-tuning（低秩适配）
