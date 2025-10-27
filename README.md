@@ -112,11 +112,13 @@ images[0].save("storybook_page1.png")
 ├── README.md
 ├── models/
 │   └── AutismStorybook-LoRA (LoRA weights)
+
 ├── prompts/
 │   ├── cognition_prompts.json
 │   ├── social_prompts.json
 │   ├── emotion_prompts.json
 │   └── story_prompts.json
+
 ├── outputs/
 │   ├── story_1/
 │   │   ├── image_1.png
