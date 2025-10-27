@@ -18,6 +18,7 @@
 ⚙️ 三、技术方案 | Technical Architecture
 
 *模型基础*
+
 基模（Base Model）：Qwen-Image 系列
 
 微调方式：LoRA Fine-tuning（低秩适配）
@@ -27,6 +28,7 @@
 
 
 *数据来源*
+
 故事文本数据集：Starlight-AI Test Set
 
 专业知识包：《孤独症儿童绘本相关资料包》
