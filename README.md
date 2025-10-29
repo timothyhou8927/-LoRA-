@@ -18,31 +18,29 @@
 ⚙️ 三、技术方案 | Technical Architecture
 
 *模型基础*
-
+```
 基模（Base Model）：Qwen-Image 系列
-
 微调方式：LoRA Fine-tuning（低秩适配）
-
 训练平台：魔搭社区 AIGC、模型训练专区（ModelScope AIGC）
-
+```
 
 
 *数据来源*
-
+```
 故事文本数据集：Starlight-AI Test Set
-
 专业知识包：《孤独症儿童绘本相关资料包》
-
 绘本生成流程基线：绘本生成Baseline工作流
-
+```
 
 🧠 四、LoRA 训练细节 | LoRA Training Details
+```
 项目	内容
 训练模型	Qwen-Image
 微调方法	LoRA (rank=8, alpha=16)
 优化目标	保持人物与场景一致性、强化视觉焦点、减少背景干扰
 数据类型	四类功能绘本（常识认知、社交礼仪、心智解读、趣味故事）
 输出格式	图像 + Prompt 组合，形成完整故事绘本场景
+```
 Prompt 设计要点
 
 指定人物名称、服装、场景关键词，保持风格一致。
@@ -52,10 +50,10 @@ Prompt 设计要点
 明确色彩方案（高饱和、纯色对比）。
 
 指令示例：
-
+```
 Prompt: A little boy with blue T-shirt smiles and waves to his friend at the playground.
 Style: bright color blocks, flat illustration, simple background, autism-friendly visual.
-
+```
 🖼️ 五、作品展示 | Output Showcase
 
 本项目提交至少 8 组绘本样例，涵盖 4 种功能类型：
@@ -82,19 +80,19 @@ LoRA轻量化训练：参数高效复用，仅需少量计算资源即可实现�
 
 1.模型加载
 在 ModelScope 或魔搭社区中下载本项目 LoRA 模型。
-
+```
 from modelscope import pipeline
 pipe = pipeline('text-to-image', model='Qwen/Qwen-Image', lora='username/AutismStorybook-LoRA')
-
+```
 
 2.输入故事文本
 使用官方故事集文本，或自定义故事输入。
 
 3.生成插图
-
+```
 images = pipe("A boy learns to share his toy with friends, autism-friendly style.")
 images[0].save("storybook_page1.png")
-
+```
 4.导出绘本
 将生成的图像按故事顺序组合输出，即可形成完整电子绘本。
 
@@ -109,16 +107,15 @@ images[0].save("storybook_page1.png")
 🤖 情绪识别反馈：通过视觉与语音分析，让系统自动推荐适配的故事类型。
 
 📎 九、文件结构 | File Structure
+```
 ├── README.md
 ├── models/
 │   └── AutismStorybook-LoRA (LoRA weights)
-
 ├── prompts/
 │   ├── cognition_prompts.json
 │   ├── social_prompts.json
 │   ├── emotion_prompts.json
 │   └── story_prompts.json
-
 ├── outputs/
 │   ├── story_1/
 │   │   ├── image_1.png
@@ -127,3 +124,4 @@ images[0].save("storybook_page1.png")
 └── scripts/
     ├── generate_storybook.py
     └── evaluate_style_consistency.ipynb
+```
